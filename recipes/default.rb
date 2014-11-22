@@ -17,5 +17,17 @@ apt_repository 'btsync' do
   key          'D294A752'
 end
 
-package 'nginx'
 package 'btsync'
+
+template '/etc/btsync/debconf-default.conf' do
+  source 'default.erb'
+  owner node['btsync']['owner']
+  group node['btsync']['group']
+  mode '0400'
+  notifies :run, "execute[reload-setting]", :immediately
+end
+
+execute 'reload-setting' do
+  command "service btsync force-reload"
+  action :nothing
+end

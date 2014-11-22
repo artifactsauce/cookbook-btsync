@@ -1,0 +1,24 @@
+{
+    "storage_path" : "<%= node['btsync']['storage_path'] %>",
+    "check_for_updates" : <%= node['btsync']['check_for_updates'] %>,
+    "display_new_version": <%= node['btsync']['display_new_version'] %>,
+    "disk_low_priority" : <%= node['btsync']['disk_low_priority'] %>,
+    "lan_encrypt_data" : <%= node['btsync']['lan_encrypt_data'] %>,
+    "rate_limit_local_peers" : <%= node['btsync']['rate_limit_local_peers'] %>,
+    "folder_rescan_interval" : <%= node['btsync']['folder_rescan_interval'] %>,
+    "folder_defaults.delete_to_trash" : <%= node['btsync']['folder_defaults']['delete_to_trash'] %>,
+    "folder_defaults.use_dht" : <%= node['btsync']['folder_defaults']['use_dht'] %>,
+    "folder_defaults.use_lan_broadcast" : <%= node['btsync']['folder_defaults']['use_lan_broadcast'] %>,
+    "folder_defaults.use_relay" : <%= node['btsync']['folder_defaults']['use_relay'] %>,
+    "folder_defaults.use_tracker" : <%= node['btsync']['folder_defaults']['use_tracker'] %>,
+    "folder_defaults.known_hosts" : "<%= node['btsync']['folder_defaults']['known_hosts'] %>",
+    "webui" :
+    {
+        "listen" : "<%= node['btsync']['webui']['listen'] %>",
+        "force_https" : <%= node['btsync']['webui']['force_https'] %>,
+        "ssl_certificate" : "<%= node['btsync']['webui']['ssl']['cert'] %>",
+        "ssl_private_key" : "<%= node['btsync']['webui']['ssl']['key'] %>",
+        "login": "<%= node['btsync']['webui']['login'] %>",
+        "password": "<%= node['btsync']['webui']['password'] %>"
+    }
+}

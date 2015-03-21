@@ -1,6 +1,6 @@
 {
     "storage_path" : "<%= node['btsync']['storage_path'] %>",
-    "check_for_updates" : <%= node['btsync']['check_for_updates'] %>,
+    "vendor": "<%= node['btsync']['vendor'] %>",
     "display_new_version": <%= node['btsync']['display_new_version'] %>,
     "disk_low_priority" : <%= node['btsync']['disk_low_priority'] %>,
     "lan_encrypt_data" : <%= node['btsync']['lan_encrypt_data'] %>,
@@ -14,11 +14,10 @@
     "folder_defaults.known_hosts" : "<%= node['btsync']['folder_defaults']['known_hosts'] %>",
     "webui" :
     {
+        "directory_root" : "<%= node['btsync']['webui']['directory_root'] %>",
         "listen" : "<%= node['btsync']['webui']['listen'] %>",
         "force_https" : <%= node['btsync']['webui']['force_https'] %>,
         "ssl_certificate" : "<%= node['btsync']['webui']['ssl']['cert'] %>",
-        "ssl_private_key" : "<%= node['btsync']['webui']['ssl']['key'] %>",
-        "login": "<%= node['btsync']['webui']['login'] %>",
-        "password": "<%= node['btsync']['webui']['password'] %>"
+        "ssl_private_key" : "<%= node['btsync']['webui']['ssl']['key'] %>"
     }
 }

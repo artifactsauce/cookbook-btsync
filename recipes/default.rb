@@ -18,6 +18,13 @@ apt_repository 'btsync' do
   key          'D294A752'
 end
 
+directory node['btsync']['webui']['directory_root'] do
+  owner node['btsync']['owner']
+  group node['btsync']['group']
+  mode '0775'
+  recursive true
+end
+
 log "installation message" do
   action :nothing
   level :info

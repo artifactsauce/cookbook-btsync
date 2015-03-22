@@ -1,5 +1,6 @@
 default['btsync']['owner'] = 'btsync'
 default['btsync']['group'] = 'btsync'
+default['btsync']['listening_port'] = 0
 default['btsync']['storage_path'] = '/var/lib/btsync/'
 default['btsync']['vendor'] = 'tuxpoldo'
 default['btsync']['display_new_version'] = false
